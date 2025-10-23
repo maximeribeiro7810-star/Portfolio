@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Langages</title>
+  <style>
+    /* 🌌 Thème violet & bleu */
+    :root {
+      --bg1: #1e1b4b;
+      --bg2: #0f172a;
+      --accent: #c084fc;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --text: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      background: radial-gradient(circle at 20% 20%, var(--bg1), var(--bg2));
+      color: var(--text);
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    /* 🔹 Section langages */
+    .langages-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .langage-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .langage-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .langage-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 14px;
+    }
+
+    .langage-card h2 {
+      margin: 8px 0;
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .langage-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    /* 🔙 Bouton retour */
+    .btn-retour-wrap {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .btn-retour {
+      display: inline-block;
+      background: linear-gradient(135deg, #22d3ee, #16a34a);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease;
+    }
+
+    .btn-retour:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mes Langages & Outils</h1>
+  </header>
+
+  <section class="langages-container">
+
+    <div class="langage-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <h2>HTML5</h2>
+      <p>Structure et contenu des pages web</p>
+    </div>
+
+    <div class="langage-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <h2>CSS3</h2>
+      <p>Stylisation et design réactif</p>
+    </div>
+
+    <div class="langage-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+      <h2>Python</h2>
+      <p>Scripts et automatisations</p>
+    </div>
+
+  </section>
+
+  <div class="btn-retour-wrap">
+    <a href="index.html" class="btn-retour">⬅ Retour au Portfolio</a>
+  </div>
+
+</body>
+</html>

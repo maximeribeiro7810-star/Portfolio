@@ -1,0 +1,448 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f9f6f6;
+    background-color: #5f0cb1;
+    line-height: 1.6;
+    background: url("vincentiu-solomon-ln5drpv_ImI-unsplash.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+header {
+    background: url(daniele-levis-pelusi-oKGm7QlPHmo-unsplash.jpg) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+nav {
+    margin-top: 20px;
+}
+
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color à.3s;
+}
+
+
+nav a:hover {
+    color: #c800ff;
+}
+
+
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin-bottom: auto;
+}
+
+
+section h2 {
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+
+.project {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+
+.project h3 {
+    margin-top: 0;
+    color: #b2a7a7;
+}
+
+.project p {
+    margin-top: 0;
+    color: #222;
+}
+
+
+#contact p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+
+#contact p a :hover {
+    text-decoration: underline;
+}
+
+
+#cv {
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 80px 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 60px auto;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+
+#cv h4 {
+    color: #a855f7;
+    margin-bottom: 20px;
+}
+
+
+.btn-cv {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #7e22ce, #3b82f6);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+.btn-cv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    background: linear-gradient(135deg, #9333ea, #2563eb);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20;
+    background-color: #222;
+    color: white;
+    font-size: 0.9rem;
+}
+
+
+section footer {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    backdrop-filter: blur(4px);
+}
+
+
+#about {
+    text-align: center;
+    padding: 60px 500px;
+}
+
+
+.a_propos {
+    font-size: 2.5rem;
+}
+
+
+/* --- Section Info-élève --- */
+#info-eleve {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 60px 0 0 40px; /* positionne le bouton à gauche */
+  width: fit-content;
+}
+
+/* Le bouton principal */
+.btn-info {
+  background: linear-gradient(135deg, #9333ea, #2563eb);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  vertical-align: middle;
+  top: -20px;
+}
+
+.btn-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* Bulles d’infos */
+.info-bulle {
+  position: absolute;
+  background: linear-gradient(135deg, #9333ea, #2563eb);
+  color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+/* Positionnement autour du bouton */
+.info-bulle.nom {
+  top: -20px;   /* au-dessus */
+  left: 120%;   /* à droite du bouton */
+}
+
+.info-bulle.age {
+  top: 40px;    /* au niveau du centre vertical du bouton */
+  left: 120%;
+}
+
+.info-bulle.classe {
+  top: 100px;    /* en dessous du bouton */
+  left: 120%;
+}
+
+/* Apparition en cascade */
+#info-eleve:hover .info-bulle.nom {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+#info-eleve:hover .info-bulle.age {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.3s;
+}
+
+#info-eleve:hover .info-bulle.classe {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+
+/* Disparition en cascade */
+#info-eleve:not(:hover) .info-bulle.nom {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.5s;
+}
+
+#info-eleve:not(:hover) .info-bulle.age {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.3s;
+}
+
+#info-eleve:not(:hover) .info-bulle.classe {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.1s;
+}
+
+
+#mes-passions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 60px 0 0 850px;
+  top: -250px;
+  width: fit-content;
+}
+
+
+.btn-pass {
+  background: linear-gradient(135deg, #9c00b8, #00eeff);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+  vertical-align: middle;
+}
+
+
+.btn-pass:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+
+.info-pass {
+
+}
+
+
+#ciel {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 60px 20px;
+    margin: 40px auto;
+    border-radius: 15px;
+    max-width: 900px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+
+#ciel h5 {
+    color: #c084fc;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+
+#ciel p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Section projets */
+#projects {
+  margin: 60px 0 0 60px; /* aligné à gauche */
+  max-width: 450px;      /* largeur de chaque projet */
+  display: flex;
+  flex-direction: column; /* empile les projets verticalement */
+  gap: 40px;              /* espace entre Projet 1 et Projet 2 */
+}
+
+/* Bloc projet */
+.project {
+  width: 850px;
+  height: 150px;      /* 🔹 garde une taille de base, mais s’agrandit si nécessaire */
+  max-height: none;       /* 🔹 enlève toute limite qui bloquerait le texte */
+  overflow-y: visible;    /* 🔹 autorise le texte à apparaître complètement */
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+
+.project img {
+  width: 90%;          /* légèrement plus petite que le bloc */
+  height: 90%;         /* idem pour la hauteur */
+  object-fit: contain;  /* garde les proportions et rentre dans le bloc */
+  transition: opacity 0.5s ease;
+  display: block;
+  padding: 5%;
+}
+
+
+/* Texte masqué par défaut */
+.project .texte {
+  position: absolute;
+  top: 0;               
+  left: 0;              
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+  opacity: 0;           /* caché par défaut */
+  text-align: left;
+  pointer-events: none;
+  background: none;
+  display: block;
+
+  /* --- Effet fondu --- */
+  transition: opacity 0.8s ease; /* fondu plus doux */
+}
+
+/* Effet au survol */
+.project:hover .texte {
+  opacity: 1;           /* texte apparaît en fondu */
+  transition-delay: 0.1s; /* petit délai pour un effet plus naturel */
+}
+
+
+/* Style du texte */
+.project .texte h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #c084fc;
+}
+
+.project .texte p {
+  margin-top: 8px;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+/* Effet au survol */
+.project:hover img {
+  opacity: 0;           /* l’image disparaît complètement */
+}
+
+.project:hover .texte {
+  opacity: 1;           /* le texte apparaît en fondu */
+}
+
+
+#btn-langages {
+  position: absolute;
+  top: 780px;
+  right: 40px;
+}
+
+
+.btn-langages {
+  background: linear-gradient(135deg, #16a34a, #22d3ee);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3 ease, box-shadow 0.3 zase;
+}
+
+
+.btn-langages:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
