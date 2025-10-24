@@ -312,6 +312,79 @@ section footer {
   position: absolute;
   background: linear-gradient(135deg, #9c00b8, #00eeff);
   color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+
+.info-pass.jeux {
+  top: 60;
+  left: -130px;
+}
+
+
+.info-pass.prog {
+  top: 60px;
+  right: -150px;
+}
+
+
+.info-pass.cult {
+  top: 120px;
+  left: -20px;
+}
+
+.info-pass.cultdebug {
+    top: 100px;
+}
+
+
+#mes-passions:hover .info-pass.jeux {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.1s;
+}
+
+
+#mes-passions:hover .info-pass.prog {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.3s;
+}
+
+
+#mes-passions:hover .info-pass.cult {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.5s;
+}
+
+
+#mes-passions:not(:hover) .info-pass.jeux {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.5s;
+}
+
+
+#mes-passions:not(:hover) .info-pass.prog {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.3s;
+}
+
+
+#mes-passions:not(:hover) .info-pass.cult {
+  opacity: 0;
+  transform: scale(0.8);
+  transition-delay: 0.1s;
 }
 
 
@@ -351,15 +424,14 @@ section footer {
 
 /* Bloc projet */
 .project {
-  width: 850px;
-  height: 150px;      /* 🔹 garde une taille de base, mais s’agrandit si nécessaire */
-  max-height: none;       /* 🔹 enlève toute limite qui bloquerait le texte */
-  overflow-y: visible;    /* 🔹 autorise le texte à apparaître complètement */
-  background-color: #ffffff;
+  width: 90%;           /* ✅ s’adapte à la taille de l’écran */
+  max-width: 800px;     /* ne dépasse pas cette taille sur grand écran */
+  margin: 0 auto;       /* centre le bloc horizontalement */
   border-radius: 15px;
+  background-color: #ffffff;
   padding: 20px;
-  color: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
 }
 
 
@@ -379,16 +451,14 @@ section footer {
   position: absolute;
   top: 0;               
   left: 0;              
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 15px 20px;
   opacity: 0;           /* caché par défaut */
   text-align: left;
   pointer-events: none;
   background: none;
-  display: block;
-
-  /* --- Effet fondu --- */
+  display: block; /* --- Effet fondu --- */
   transition: opacity 0.8s ease; /* fondu plus doux */
 }
 
@@ -447,4 +517,44 @@ section footer {
 .btn-langages:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+
+  #about, #projects, #contact, #cv {
+    margin: 20px;
+  }
+
+
+  .project {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+
+  .project h3 {
+    font-size: 1.1rem;
+  }
+
+
+  .project p {
+    font-size: 1rem;
+  }
+
+
+  footer p {
+    font-size: 0.9rem;
+  }
 }
