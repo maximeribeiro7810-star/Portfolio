@@ -309,7 +309,9 @@ section footer {
 
 
 .info-pass {
-
+  position: absolute;
+  background: linear-gradient(135deg, #9c00b8, #00eeff);
+  color: white;
 }
 
 
